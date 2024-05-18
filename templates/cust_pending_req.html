@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Service Requests</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('https://t3.ftcdn.net/jpg/06/16/17/82/360_F_616178231_EjCK2QBHCUnt6VRqUXPaZp5KdPkY6Epi.jpg');
+    background-size: cover;
+    color: black; /* Change text color for better visibility */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust background color opacity */
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust background color opacity */
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+select, input[type="number"] {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1); /* Adjust background color opacity */
+    color: rgb(21, 19, 19);
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Button color */
+    color: rgb(13, 12, 12);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Button hover color */
+}
+
+p {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+</style>
+
+</style>
+<body>
+    <h2>Pending Service Requests</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Request ID</th>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Customer Email</td>
+                <th>Customer Phone_Number</td>
+                <th>Vehicle Number</th>
+                <th>Vehicle Model</th>
+                <th>Vehicle Category</th>
+                <th>Problem Description</th>
+                <th>Status</th>
+                <th>Cost</th>
+                <th>Date Registered</th>
+                <th>Date Requested</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if requests %}
+            {% for request in requests %}
+            <tr>
+                <td>{{ request[0] }}</td>
+                <td>{{ request[1] }}</td>
+                <td>{{ request[2] }}</td>
+                <td>{{ request[3] }}</td>
+                <td>{{ request[4] }}</td>
+                <td>{{ request[5] }}</td>
+                <td>{{ request[6] }}</td>
+                <td>{{ request[7] }}</td>
+                <td>{{ request[8] }}</td>
+                <td>{{ request[9] }}</td>
+                <td>
+                    <form action="{{ url_for('update_status', request_id=request[0]) }}" method="POST">
+                        <select name="status">
+                            <option value="Accept">Accept</option>
+                            <option value="Reject">Reject</option>
+                            <option value="Pending" selected>Pending</option> <!-- Default to the current status -->
+                        </select>
+                        <button type="submit">Update Status</button>
+                    </form>
+                </td>
+                <td>{{ request[11] }}</td>
+                <td>{{ request[12] }}</td>
+                <td>{{ request[13] }}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <p>No Pending Requests </p>
+            {% endif %}
+        </tbody>
+    </table>
+</body>
+</html>

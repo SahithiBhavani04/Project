@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vehicle Services</title>
+        <link rel="icon" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Fso%2Forganic&psig=AOvVaw2mwKGax-QddzswR3rOErKW&ust=1710756475335000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLDJ3tCG-4QDFQAAAAAdAAAAABAE"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/ed3ab63979.js" crossorigin="anonymous"></script>
+    </head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f6f5;
+    }
+    
+    nav {
+        background-color: black;
+        color: #fff;
+        padding: 20px 10px;
+    }
+    
+    nav h1 {
+        margin: 0;
+        text-align: center;
+    }
+    
+    nav h1 span {
+        color: #007bff; 
+    }
+    
+    nav ul {
+        list-style: none;
+        padding-left: 40px;
+        margin: 0;
+       
+    }
+    
+    nav ul li {
+        display: inline;
+        padding-left: 50px;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        padding-left: 50px;
+    }
+    
+    nav ul li a::after {
+        background-color:white;
+        
+    }
+</style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    
+    {% for message in messages %}
+      <center><p>{{ message }}</p></center>
+    {% endfor %}
+    
+  {% endif %}
+{% endwith %}
+
+<body>
+    <h1><center>Vehicle Services</center></h1>
+    <nav>
+        <ul>
+          <li><a href="about"><i class="fa-solid fa-address-card"></i>About Us</a></li>
+            <li><a href="#category"><i class="fa-solid fa-car"></i>&nbsp;Categories</a></li>
+            <li><a href="#service"><i class="fa-brands fa-servicestack"></i>&nbsp;Services</a></li>
+            <li><a href="#location"><i class="fa-solid fa-location-dot"></i>&nbsp;Location</a></li>
+            <li><a href="{{url_for('welcome')}}"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;Sign Up</a></li>
+            <li><a href="{{url_for('welcome')}}"><i class="fa-solid fa-right-to-bracket"></i>&nbsp;Login</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+<section id="about">
+  <h1 class="heading text-center mt-5" style="color:rgb(117, 24, 8);">About Us</h1>
+  <img src="https://eliteautopune.com/images/main-slider/image-4.png" style="margin-left: 20%;"/>
+  <p style="text-align: center;">Repair and maintenance work carried out at a vehicle service center helps improve the performance of the vehicle. This, in turn, increases the average lifespan of the vehicle. Vehicle servicing is primarily carried out at company specified/authorized service centers as well as local garages.We interact with mechanics who are very much trained to perform the vehicle services
+  .We also provide a varied varriety of services for all the vehicles.Our Mechanics make the Services with lot of sensitivity.We have a many skillful mechanics whose work makes us always a step-ahead for their and our Growth.We listen accurately with your requirements and work according on it.And There is immediate response from our mechanics who finishes your service requirements in a couple of days</p>
+</section>
+
+       <section id="category">
+        <h1 class="heading text-center mt-5" style="color:rgb(117, 24, 8);">Categories</h1>
+        <div class="card-group">
+          <div class="card" style=" padding-left: 2%;padding-right: 2%;">
+            <img src="https://wallpapers.com/images/hd/1920x1080-hd-bikes-ducati-monster-696-map9id48a4vhgc34.jpg" class="card-img-top" alt="Bikes">
+            <div class="card-body">
+              <h5 class="card-title">BIKES</h5>
+              <p class="card-text">Bike servicing they check all the components like electronics, engine,carburetor engine oil change, oil filter change, air filter, swing arms, chain and sprocket, suspension, breaks and overall cleaning and lubrication</p>
+              </div>
+          </div>
+          <div class="card" style=" padding-left: 2%;padding-right: 2%;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwv5xUUTn2ySADqmF50pRBIilM62wPHnMyi0At1j2Uh8Nw8CbpHO2KkT-koynZKY7HVs&usqp=CAU" class="card-img-top" alt="Cars">
+            <div class="card-body">
+              <h5 class="card-title">CARS</h5>
+              <p class="card-text">Basic services usually include a visual inspection and oil and filter change, the critical fluids in the engine such as anti-freeze, brake fluid, washer fluid, and steering fluid, are topped up.</p>
+            </div>
+          </div>
+          <div class="card" style=" padding-left: 2%;padding-right: 2%;">
+            <img src="https://5.imimg.com/data5/IQ/SL/MY-853217/mahindra-navistars-tipper-trucks-500x500.jpg" class="card-img-top" alt="Trucks">
+            <div class="card-body">
+              <h5 class="card-title">TRUCKS</h5>
+              <p class="card-text">Trucking services are a form of ground freight that move cargo from point A to point B over land. Trucks use shipping routes to move goods throughout the United States to deliver shipments for various industries.</p>
+            </div>
+          </div>
+        </div>
+       </section><br><br>
+
+       <section>
+        <div class="card-group">
+          <div class="card" style=" padding-left: 2%;padding-right: 2%;">
+            <img src="https://cdn.kibrispdr.org/data/893/scooter-background-19.jpg" class="card-img-top" alt="Scooty">
+            <div class="card-body">
+              <h5 class="card-title">Scooties</h5>
+              <p class="card-text">A Scooter service includes a general inspection of nuts, bolts, and moving parts. Any loose components are tightened, and anti-corrosion sprays are applied to prevent rusting. A test drive is conducted to check for vibrations and wheel wobbling, ensuring a safe and smooth ride</p>
+              </div>
+          </div>
+          <div class="card" style=" padding-left: 2%;padding-right: 2%;">
+            <img src="https://5.imimg.com/data5/TU/TM/TF/SELLER-52981785/bajaj-maxima-cargo-diesel-auto-500x500-jpg-500x500.jpg" height="50%" class="card-img-top" alt="Auto">
+            <div class="card-body">
+              <h5 class="card-title">Autos</h5>
+              <p class="card-text">Basic services usually include a visual inspection and oil and filter change, the critical fluids in the engine such as anti-freeze, brake fluid, washer fluid, and steering fluid, are topped up.</p>
+            </div>
+          </div>
+          <div class="card" style=" padding-left: 2%;padding-right: 2%;">
+            <img src="https://etimg.etb2bimg.com/photo/68842665.cms" height="53%" class="card-img-top" alt="Vans">
+            <div class="card-body">
+              <h5 class="card-title">Vans</h5>
+              <p class="card-text">van servicing involves a thorough investigation of your vehicle to check that it's running as safely, smoothly and efficiently as possible. It also includes top ups and replacements of certain components, like engine oil and coolant, as necessary.</p>
+            </div>
+          </div>
+        </div>
+       </section>
+        <section id="service">
+          <div class="container">
+          <div class="row">
+                    <center>
+                      <h1 class="heading text-center mt-5" style="color:rgb(117, 24, 8);">Services</h1>
+              <img src="https://etimg.etb2bimg.com/photo/85364012.cms" width="30%" height="66%" style="margin-right: 3%;"/>
+           
+              <img src="https://www.bmw-evmautokraft.in/sites/default/files/2023-06/vehicle%20services_3.png" width="30%" height="66%" style="margin-right: 3%;"/>
+            
+              <img src="https://images.netdirector.co.uk/gforces-auto/image/upload/w_392,h_294,dpr_2.0,q_auto,c_fill,f_auto,fl_lossy/auto-client/ba63c48ff2658029e81aa57f4f144690/a0287782.jpg" width="30%"><br><br>
+                    </center>
+                    <h4> Uninterrupted Monitoring</h4>
+             <p>One of the primary features of a VMS is real-time vehicle tracking. This enables fleet managers to monitor vehicles continuously, ensuring they are on the right path and maintaining schedules. Through GPS technology, managers can view the exact location of each vehicle, making it easier to respond promptly to any issues that arise.</p>
+             <h4>Proactive Vehicle Care</h4>
+             <p>Maintenance management is another crucial feature. This aspect of the Vehicle Management System helps in scheduling regular maintenance checks, ensuring vehicles are always in top condition. By proactively managing maintenance, fleet managers can avoid costly repairs and downtime due to unexpected vehicle failures.</p>
+            <h4>Cost Reduction</h4>
+            <p>Fuel Management is integral to controlling operational costs. A VMS provides detailed insights into fuel consumption patterns, helping identify areas where fuel usage can be optimized. This not only saves money but also supports environmental sustainability efforts.</p>
+            </div>
+          </div>
+        </section>
+          
+            
+        <section  id="location">
+          <div class="container">
+            <h1 class="heading mt-5 text-center" style="color:rgb(117, 24, 8);">Location</h1>
+              <div class="row">
+                 <div class="col-12 col-md-6 order-sm-1 order-md-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7650.832110365499!2d80.63936077770998!3d16.5050802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fab12587c72b%3A0x20aec0bac504143c!2sParvathaneni%20Brahmayya%20Siddhartha%20college%20of%20Arts%20%26%20Science!5e0!3m2!1sen!2sin!4v1710734586604!5m2!1sen!2sin" width="700" height="400" style="border:0;margin-left: 40%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+            </div>
+          </div>
+        </section><br><br><br>
+        <section >
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <h4 class="fhead">@COPYRIGHT By Vehicle Services</h4>
+                <a href="#">
+                <img src="https://etimg.etb2bimg.com/photo/78030839.cms" width="100%"/>
+               </a>
+                <p class="phead">Vehicle Services Website</p>
+              </div>
+              <div class="col-12 text-center">
+                 <div>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                 </div>
+                 <div class="arrow"><a href="#"><i class="fa-solid fa-arrow-up"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </body>
+</html>

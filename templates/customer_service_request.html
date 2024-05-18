@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Request Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('https://t4.ftcdn.net/jpg/06/31/02/91/360_F_631029129_MnCBy15crFRtgCsXdn5ipyZvaKl7UaKZ.jpg');
+            background-size:contain;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            margin-top: 6%;
+            margin-left: 10%;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            height: 400px;
+            background-image: url('https://img.freepik.com/free-vector/futuristic-white-technology-background_23-2148390336.jpg?size=626&ext=jpg&ga=GA1.1.1224184972.1715385600&semt=ais_user');
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 style="text-align: center;color: white;">Service Request Form</h2>
+    <form action="#" method="POST">
+        <label for="vehicle_category">Vehicle Category:</label>
+        <select id="vehicle_category" name="vehicle_category" required>
+            <option value="">Select Category</option>
+            <option value="Car">Car</option>
+            <option value="Bike">Bike</option>
+            <option value="Scooty">Scooty</option>
+            <option value="Truck">Truck</option>
+            <option value="Van">Van</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+        <label for="vehicle_number">Vehicle Number:</label>
+        <input type="text" id="vehicle_number" name="vehicle_number" required>
+
+        <label for="vehicle_model">Vehicle Model:</label>
+        <input type="text" id="vehicle_model" name="vehicle_model" required>
+
+        <label for="problem_description">Problem Description:</label>
+        <textarea id="problem_description" name="problem_description" rows="4" required></textarea>
+        
+        <button type="submit">Submit Request</button>
+    </form>
+</div>
+
+</body>
+</html>

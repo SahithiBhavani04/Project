@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanic Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('https://img.freepik.com/premium-photo/arafed-image-car-blue-background-with-circles-generative-ai_958098-88425.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(73, 70, 70, 0.8); /* Add opacity to the background color */
+            margin-top:10%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: aliceblue;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: yellowgreen;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a{
+            color: white;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+
+<div class="container">
+    <h2 style="text-align: center;color: white;margin-top: 7%;">Mechanic Login</h2>
+    <form action="#" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="id1" name="id1" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <center>
+        <a href="{{url_for('mregistration')}}">Mechanic Sign up</a></p><br/>
+        <button type="submit">Login</button>
+    </form>
+    <a href="{{url_for('mregistration')}}">Don't you have an account</a>
+    <span><a href="{{url_for('mforgot')}}">Forgot password</a></span>
+</div>
+
+</body>
+</html>

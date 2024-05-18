@@ -1,0 +1,68 @@
+.main{
+    max-width :500px;
+    box-shadow:2px 3px 4px green;
+    margin-bottom: 5%;
+    padding-bottom: 3%;
+    margin-left: 30%;
+    color: green;
+    margin-top: 4%;
+}
+label{
+    color: green;
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-style: normal;
+    margin-left:4%;
+    display: inline-block;
+}
+input[type="text"],[type="email"],[type="password"]{
+    width:60%;
+    padding: 1%;
+    box-shadow:1px 2px 3px black;
+    border:none;
+    border-radius: 5px;
+    margin-left: 4%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+input[type='checkbox']{
+    accent-color: green;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.check{
+    display:flex;
+    flex-direction: row;
+    margin-left:3%;
+    font-size: 18px;
+    display: inline;
+}
+button{
+    border: none;
+    margin-left: 9%;
+    width: 80%;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    background-color: green;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px grey;
+    padding:1%;
+}
+button:hover{
+    background-color: #3a923a;
+    transform: scale(1,1);
+}
+p{
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 2%;
+    text-decoration: none;
+}
+a{
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
